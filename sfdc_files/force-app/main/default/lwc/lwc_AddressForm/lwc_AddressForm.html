@@ -1,0 +1,34 @@
+<template>
+    <lightning-input-address
+        address-label="Origination Address"
+        street-label="Street"
+        city-label="City"
+        onchange={handleShipperInputChange}
+        country-label="Country"
+        province-label="State/Province"
+        postal-code-label="PostalCode"
+        required
+        field-level-help="Input the address the shipment will be sent from." >
+    </lightning-input-address>
+    <lightning-input-address
+        address-label="Destination Address"
+        street-label="Street"
+        city-label="City"
+        onchange={handleRecipientInputChange}
+        country-label="Country"
+        province-label="State/Province"
+        postal-code-label="PostalCode"
+        required
+        field-level-help="Input the address the shipment will be sent to." >
+    </lightning-input-address>
+    <div class="bottom-container">
+        <div class="weight-input-container">
+            <lightning-input required type="number" label="Item Weight" onchange={handleWeightInputChange}></lightning-input>
+        </div>
+        <div class="submit-button-container">
+            <lightning-button label="Submit" onclick={handleSubmitClick} disabled={isMissingRequiredData}></lightning-button>
+            <!-- <lightning-button label="Submit" onclick={handleSubmitClick}></lightning-button> -->
+        </div>
+    </div>
+</template>
+    

@@ -1,0 +1,15 @@
+.bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+
+.weight-input-container {
+    padding: 3px;
+}
+
+.submit-button-container {
+    padding: 3px;
+}

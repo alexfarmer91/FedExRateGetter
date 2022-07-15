@@ -1,0 +1,12 @@
+<template>
+    <div class="form-container">
+        <c-lwc_-address-form onaddresssubmitevent={handleSubmit}></c-lwc_-address-form>
+    </div>
+    <ul class="slds-m-around_medium">
+        <template for:each={rates} for:item="rate">
+            <li key={rate.serviceType}>
+                <c-lwc_-rate-details-card rate={rate}></c-lwc_-rate-details-card>
+            </li>
+        </template>
+    </ul>
+</template>
